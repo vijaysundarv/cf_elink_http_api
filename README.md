@@ -116,7 +116,7 @@ $ curl http://localhost:58729/product/Pixel
 > [What is Minikube?](https://minikube.sigs.k8s.io/docs/start/)  
 > [How to setup WSL?](https://fireship.io/lessons/windows-10-for-web-dev/) 
 
-### TODO's
+### Some more internals
 
 - Playbook tasks to post mock data & validate
 - Playbook tasks to delete mock data & validate
