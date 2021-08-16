@@ -65,14 +65,14 @@ $ kubectl pods -A
 Once the installation is done, clone the repo as below.  
 ```bash
 $ git clone https://github.com/vijaysundarv/cf_elink_http_api.git
-
+```
 
 ## Deploy sequence :shipit:
 > - Creates necessary config directories for playbook to validate.
 > - Checks existing minikube status and starts a single node minikube cluster if none exists.
 > - Switches docker environment to minikube.
 > - Deletes old images of the application and rebuilds a new docker image.
-> - Gets the minikube's IP address to add it as an External IP to the application loadbalancer service.
+> - Gets the minikube IP address to add it as an External IP to the application loadbalancer service.
 > - Creates a Kubernetes Application Deployment for our Python HTTP-API.
 > - Creates a Kubernetes LoadBalancer Service for our application.
 > - Exposes the Application LoadBalancer service to the host via minikube tunnel.
@@ -88,6 +88,7 @@ $ cd http_api
 $ ansible-playbook -i inventory http-api-deployment.yaml --extra-vars ansible_python_interpreter=/usr/bin/python3
 # For better analysis, add -vvv to the above command for verbose output.
 ```
+
 ### [How to build your inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#how-to-build-your-inventory) << click on the link
 
 ### Time to TEST :t-rex:
@@ -99,7 +100,6 @@ $ curl http://localhost:58729/
 Server Works!
 
 # Product endpoints returns product info
-
 $ curl http://localhost:58729/product/Pixel
 {
 "productName": "Pixel",
@@ -120,4 +120,6 @@ $ curl http://localhost:58729/product/Pixel
 
 - Playbook tasks to post mock data & validate
 - Playbook tasks to delete mock data & validate
+- Adding playbook output execution from test runs
+- Publishing docker image to docker hub
  

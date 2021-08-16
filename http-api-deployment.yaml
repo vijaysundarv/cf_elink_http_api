@@ -191,7 +191,7 @@
 
     # Info on commands that can be used to test the endpoints.
     - name: Information
-      shell: echo "Run> curl {{ service_url }}/ OR curl {{ service_url }}/"
+      shell: echo "Run> curl {{ service_url }}/ OR curl {{ service_url }}/product/Pixel Example Products are Pixel,Nokia,Apple"
       register: information
 
     - name: Print Test Usage
