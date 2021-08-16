@@ -1,5 +1,5 @@
 # Deploy a simple http-api in minikube using python and ansible
-A simple HTTP-API. Serves on port 5001 when run via Docker. When deployed on minikube, use the service url printed in the console output. *http://127.0.01:<minikube-port>/path*
+A simple HTTP-API. Serves on port 5001 when run via Docker. When deployed on minikube, use the service url printed in the console output. *http://127.0.01:minikubePort/path*
 
 ## System & Application Versions
 ```bash
